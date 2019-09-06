@@ -1,0 +1,18 @@
+<html>
+<header><title>Castro_EMBC2019</title></header>
+<body>
+@article{10.1371/journal.pone.0177544, <br>
+    author = {Araújo, Teresa AND Aresta, Guilherme AND Castro, Eduardo AND Rouco, José AND Aguiar, Paulo AND Eloy, Catarina AND Polónia, António AND Campilho, Aurélio},<br>
+    journal = {PLOS ONE},<br>
+    publisher = {Public Library of Science},<br>
+    title = {Classification of breast cancer histology images using Convolutional Neural Networks},<br>
+    year = {2017},<br>
+    month = {06},<br>
+    volume = {12},<br>
+    url = {https://doi.org/10.1371/journal.pone.0177544},<br>
+    pages = {1-14},<br>
+    number = {6},<br>
+    doi = {10.1371/journal.pone.0177544}<br>
+}
+</body>
+</html>
