@@ -20,6 +20,37 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f6f7;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
   .bg-1 { 
     background-color: #BDD4E7;
     color: #555555;
@@ -55,23 +86,32 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   </style>
   </head>
   <body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About me</a>
+  <a href="#">Demos</a>
+  <a href="#">Blog</a>
+</div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default">  
       <div class="container">
+
+
         <div class="navbar-header"> <button type="button"
             class="navbar-toggle" data-toggle="collapse"
-            data-target="#myNavbar"> <span class="icon-bar"></span> <span
+            data-target="#myNavbar"> <span class="icon-bar"></span>
+         <span
               class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand" style="cursor:default" href="#">Eduardo
+          <a class="navbar-brand" style="cursor:default" href="#">
+
+<button class="openbtn" onclick="openNav()">☰  </button>  
 
 
+        Eduardo Castro</a> </div>
 
-
-
-
-
-            Castro</a> </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
+        <div id="test" class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://www.inesctec.pt">INESC TEC</a></li>
             <li><a href="https://vcmi.inesctec.pt/">VCMI</a></li>
@@ -99,8 +139,8 @@ href="https://stats.stackexchange.com/users/262461/eduardo-meca-castro?tab=profi
           </li>
         </ul>
       </div>
-      <div class="col-sm-2"> </div>
-      <div class="col-sm-4">
+      <div class="col-sm-1"> </div>
+      <div class="col-sm-5">
         <p align="justify"> My name is Eduardo Castro, and I am
           currently doing my Ph.D. at the Faculty of Engineering of the
           University of Porto, in Electrotechnical and Computers
@@ -149,5 +189,18 @@ href="https://stats.stackexchange.com/users/262461/eduardo-meca-castro?tab=profi
       <p>Email me at: <a href="malito:emcastro@inesctec.pt">
           emcastro@inesctec.pt </a> </p>
     </footer>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "200px";
+  document.getElementById("test").style.marginLeft = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("test").style.marginLeft= "0";
+}
+</script>
+
   </body>
 </html>
