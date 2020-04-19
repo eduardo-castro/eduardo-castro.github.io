@@ -15,11 +15,19 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <style>
   body {
     font: 20px Montserrat, sans-serif;
-    line-height: 1.8;
+    line-height: 1.5;
+    font-weight: 900;
     color: #f5f6f7;
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
+
+  .header sml_logo {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: #555;
+  }
 
 .sidebar {
   height: 100%;
@@ -28,10 +36,11 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #f5f6f7;
+  background-color: #2f2f2f;
+  opacity: 0.85;
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  transition: 0.2s;
+  padding-top: 85px;
 }
 
 .sidebar a {
@@ -43,21 +52,28 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   transition: 0.3s;
 }
 
+.logo
+{
+width:25px;
+height:25px;
+}
   .openbtn {
     font-size: 20px;
     cursor: pointer;
 
-    color: white;
+    color: #f5f5f5;
+    background-color: #2f2f2f;
     padding: 10px 15px;
     border: none;
   }
   .bg-1 { 
-    background-color: #BDD4E7;
+    background-color: #f5f5f5;
     color: #555555;
   }
   .bg-2 { 
-    background-color: #05204A;
-    color: #ffffff;
+    background-color: #1B9AAA;
+    color: #2f2f2f;
+    font-weight: 800
   }
   .bg-3 { 
     background-color: #ffffff; /* White */
@@ -70,25 +86,29 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
+    padding-left: 70px;
+    padding-right: 70px
   }
   .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
+    z-index: 2;
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    background-color: #2f2f2f;
   }
   .navbar-nav  li a:hover {
-    color: #1abc9c !important;
+    color: #1B9AAA !important;
   }
   </style>
   </head>
   <body>
 
 <div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
   <a href="#">About me</a>
   <a href="#">Demos</a>
   <a href="#">Blog</a>
@@ -106,7 +126,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
               class="icon-bar"></span> <span class="icon-bar"></span> </button>
           <a class="navbar-brand" style="cursor:default" href="#">
 
-<button class="openbtn" onclick="openNav()">☰  </button>  
+<button class="openbtn" onclick="toggleNav()">☰  </button>  
 
 
         Eduardo Castro</a> </div>
@@ -121,68 +141,96 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     </nav>
     <!-- First Container -->
     <div class="container-fluid bg-1 text-center">
-      <div class="col-sm-1"> </div>
-      <div class="col-sm-4"> <img src="mine.jpg" class="img-responsive
+      <div class="col-sm-5"> <img src="personal.jpg" class="img-responsive
           img-circle margin" style="display: inline;" alt="Bird"
           width="304" height="304"><br>
         <font size="+1"> PhD candidate at INESC TEC </font>
-        <h2><br>
+        <h2 align="left"; style="font-size: 24px; font-weight: 600"><br>
           News </h2>
-        <ul>
-          <li font-size:10px="">
-            <div align="left"> [Oct 19] - I am now on <a
-href="https://stats.stackexchange.com/users/262461/eduardo-meca-castro?tab=profile">Stack
-
-
-
-                Exchange </a> </div>
+        <ul align="left"; style="font-size: 16px">
+          <li>
+            [Mar 20] - My paper on the effect of "soft" rotation priors 
+            in CNNs was accepted for IJCNN2020.
+            </li>
+          <li>
+            [Oct 19] - I am now on 
+            <a href="https://stats.stackexchange.com/users/262461/eduardo-meca-castro?tab=profile">
+              Stack Exchange
+            </a> 
+            <a href="https://stats.stackexchange.com/users/262461/eduardo-meca-castro?tab=profile">
+             <img class="logo" src="icon_stack_exchange.png"/>
+            </a>
           </li>
+          <br>
         </ul>
       </div>
       <div class="col-sm-1"> </div>
-      <div class="col-sm-5">
+      <div class="col-sm-6">
+        <h3 align="left"> <b>About Me</b>
+         </h3>
+
         <p align="justify"> My name is Eduardo Castro, and I am
-          currently doing my Ph.D. at the Faculty of Engineering of the
-          University of Porto, in Electrotechnical and Computers
-          Engineering. I do my research work at INESC TEC in the Visual
-          Computing and Machine Intelligence Group. <br>
+          currently doing my Ph.D. at the 
+          <a href="https://sigarra.up.pt/feup/en/web_page.inicial">
+            Faculty of Engineering of the University of Porto</a>, in Electrotechnical and Computers
+          Engineering. I do my research work at <a href="https://inesctec.pt/en">INESC TEC</a> in the <a href="https://vcmi.inesctec.pt/"> Visual
+          Computing and Machine Intelligence Group</a>.
+          <br>
           <br>
           My research topic is the application of Computer Vision and
           Machine Learning techniques to Breast Cancer Diagnosis in
           Mammography. The ultimate goal is to contribute to attenuate
           the burden of this disease by developing accurate CAD systems
-          usable in screening. I am currently interested in methods to
-          make the optimization of Deep Learning methods more robust in
-          scenarios of scarce and challenging data, such as those found
-          in medical imaging. I am also interested in ways of
-          integrating information from many regions of multiple images
-          to make an accurate global diagnosis. I am generally curious,
-          eager about learning and captivated by thought-provoking
-          arguments. </p>
+          usable in screening.
+          <br>
+          <br>
+          I also collaborate in other activities related to the field of Computer Vision,
+          such as the <a href="http://visum.inesctec.pt/">VISUM Summer School</a> (2018, 2019 and 2020) and the vCardID project 
+          for the development of a national fingerprint identification algorithm.
+        </p>
+        <br>
+        <h3 align="left"> <b>Research Interests</b>
+        </h3>
+        <p align="justify" style = "text-indent : 1em">
+          Deep Learning • Computer Vision • Medical Image Analysis 
+        </p>
+
+         
       </div>
-      <div class="col-sm-1"> </div>
     </div>
     <!-- Second Container -->
     <div class="container-fluid bg-2 text-center">
-      <h3 class="margin">Publications</h3>
-      <p>Elastic deformations for data augmentation in breast cancer
-        mass detection (BHI 2018) <a href="bibtex_files/BHI2018.html">
-          [bibtex] </a> <a href="pdf_files/BHI2018.pdf"> [pdf] </a> </p>
-      <p>Weight Rotation as a Regularization Strategy in Convolutional
-        Neural Networks (EMBC 2019) <a
-          href="bibtex_files/EMBC2019.html"> [bibtex] </a><a
-          href="pdf_files/EMBC2019.pdf"> [pdf] </a> </p>
+      <h3 class="margin" style="font-weight: 800; color:#2f2f2f">Publications</h3>
+
+      <p>Soft Rotation Equivariant Convolutional Neural Networks (IJCNN 2020)
+        &emsp; <a href="bibtex_files/IJCNN2020.html"> <img class="logo" src="icon_bibtex.png"/> </a>
+        &emsp;<a href="pdf_files/IJCNN2020.pdf"> <img class="logo" src="icon_pdf.jpg"/>  </a>     
+      </p>
+
+        <p>Weight Rotation as a Regularization Strategy in Convolutional Neural Networks (EMBC 2019)
+          &emsp; <a href="bibtex_files/EMBC2019.html">  <img class="logo" src="icon_bibtex.png"/> </a>
+          &emsp; <a href="pdf_files/EMBC2019.pdf"> <img class="logo" src="icon_pdf.jpg"/>  </a> 
+        </p>
+
+      <p>Elastic deformations for data augmentation in breast cancer mass detection (BHI 2018)
+        &emsp; <a href="bibtex_files/BHI2018.html"> <img class="logo" src="icon_bibtex.png"/> </a>
+        &emsp; <a href="pdf_files/BHI2018.pdf"> <img class="logo" src="icon_pdf.jpg"/>  </a> 
+      </p>
+
       <br>
       <br>
-      <h3 class="margin">Publications in which I am Co-Author</h3>
-      <p>Classification of breast cancer histology images using
-        Convolutional Neural Networks (PLOS ONE (2017)) <a
-          href="bibtex_files/PLOSONE2017.html"> [bibtex] </a> <a
-          href="pdf_files/PLOSONE2017.pdf"> [pdf] </a> </p>
-      <p> Deep Keypoint Detection for the Aesthetic Evaluation of Breast
-        Cancer Surgery Outcomes (ISBI 2019) <a
-          href="bibtex_files/ISBI2019.html"> [bibtex] </a> <a
-          href="pdf_files/ISBI2019.pdf"> [pdf] </a> </p>
+      <h3 class="margin" style="font-weight: 800; color:#2f2f2f">Publications in which I am Co-Author</h3>
+
+      <p> Deep Keypoint Detection for the Aesthetic Evaluation of Breast Cancer Surgery Outcomes (ISBI 2019)
+        &emsp; <a href="bibtex_files/ISBI2019.html"> <img class="logo" src="icon_bibtex.png"/> </a>
+        &emsp; <a href="pdf_files/ISBI2019.pdf"> <img class="logo" src="icon_pdf.jpg"/>  </a>
+      </p>
+
+      <p>Classification of breast cancer histology images using Convolutional Neural Networks (PLOS ONE (2017))
+        &emsp; <a href="bibtex_files/PLOSONE2017.html"> <img class="logo" src="icon_bibtex.png"/> </a>
+        &emsp; <a href="pdf_files/PLOSONE2017.pdf"> <img class="logo" src="icon_pdf.jpg"/>  </a>
+      </p>
+
     </div>
     <!-- Footer -->
     <footer class="container-fluid bg-4 text-center">
@@ -191,6 +239,13 @@ href="https://stats.stackexchange.com/users/262461/eduardo-meca-castro?tab=profi
     </footer>
 
 <script>
+
+function toggleNav(){
+    navSize = document.getElementById("mySidebar").style.width;
+    if (navSize == "200px")
+      return closeNav();
+    return openNav();
+  }
 function openNav() {
   document.getElementById("mySidebar").style.width = "200px";
   document.getElementById("test").style.marginLeft = "200px";
