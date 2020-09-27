@@ -58,17 +58,17 @@ border: none;
 
 
 .bg-1 {
-background-color: #f5f5f5;
+background-color: #d5d5d5;
 color: #555555;
 }
 .bg-2 {
-background-color: #538083;
-color: #2f2f2f;
-font-weight: 800
+background-color: #3D4F4F ;
+  color: #CCCFD1;
+font-weight: 600;
 }
 .bg-3 {
-background-color: #ffffff; /* White */
-color: #555555;
+background-color: #2E0000;
+color: #ABABAB;
 }
 .bg-4 {
 background-color: #2f2f2f; /* Black Gray */
